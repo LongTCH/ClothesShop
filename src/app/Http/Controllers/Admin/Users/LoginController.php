@@ -23,11 +23,12 @@ class LoginController extends Controller
             'password' => 'required'
         ]);
 
-        if (Auth::attempt([
+        if (
+            Auth::attempt([
             'email' => $request->input('email'),
             'password' => $request->input('password')
-        ], $request->input('remember'))) {
-
+            ], $request->input('remember'))
+        ) {
             return redirect()->route('admin');
         }
 

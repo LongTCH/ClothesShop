@@ -28,7 +28,7 @@ class CreateFormRequest extends FormRequest
         ];
     }
 
-    public function messages() : array
+    public function messages(): array
     {
         return [
             'name.required' => 'Vui lòng nhập tên Danh Mục'
